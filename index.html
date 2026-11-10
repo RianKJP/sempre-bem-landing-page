@@ -23,6 +23,20 @@
     />
     <title>Sempre Bem — Cuidado e oportunidades no mesmo app</title>
     <script type="module" crossorigin src="/assets/index-Dw-uzG0E.js"></script>
+    <script>
+      const apkUrl = "https://www.mediafire.com/file/t2k3jhl88d4e4kh/app-release.apk/file";
+
+      const updateDownloadLinks = () => {
+        document.querySelectorAll('a[download]').forEach((link) => {
+          link.href = apkUrl;
+        });
+      };
+
+      new MutationObserver(updateDownloadLinks).observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+      });
+    </script>
     <link rel="stylesheet" crossorigin href="/assets/index-Cf2FfrE-.css">
   </head>
   <body>
